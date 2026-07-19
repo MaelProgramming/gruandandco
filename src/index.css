@@ -1,0 +1,255 @@
+/* Gruand & Co - Old Money Design System */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Color Palette - Old Money & Heritage Luxe */
+  --bg-dark-void: #060607;
+  --bg-dark-onyx: #0D0D0F;
+  --bg-dark-card: #131215;
+  --bg-leather-dark: #1A110B;
+  --bg-leather-cognac: #26170E;
+
+  /* Gold Shades & Foil Gradients */
+  --gold-pure: #D4AF37;
+  --gold-light: #F7E7B4;
+  --gold-soft: #E5C365;
+  --gold-dark: #9A7B38;
+  --gold-deep: #6B521E;
+  
+  /* Gradients */
+  --gold-gradient: linear-gradient(135deg, #F7E7B4 0%, #D4AF37 50%, #9A7B38 100%);
+  --gold-gradient-soft: linear-gradient(135deg, rgba(247, 231, 180, 0.15) 0%, rgba(212, 175, 55, 0.08) 50%, rgba(154, 123, 56, 0.03) 100%);
+  --gold-gradient-border: linear-gradient(135deg, rgba(212, 175, 55, 0.6) 0%, rgba(154, 123, 56, 0.2) 50%, rgba(212, 175, 55, 0.5) 100%);
+  --leather-gradient: linear-gradient(160deg, rgba(38, 23, 14, 0.85) 0%, rgba(13, 13, 15, 0.95) 100%);
+  
+  /* Text Colors */
+  --text-silk: #F8F6F0;
+  --text-parchment: #C9C3B4;
+  --text-muted: #8E887B;
+  --text-gold: #E5C365;
+
+  /* Fonts */
+  --font-serif-display: 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+  --font-serif-body: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Borders & Shadows */
+  --border-gold-subtle: 1px solid rgba(212, 175, 55, 0.22);
+  --border-gold-bright: 1px solid rgba(212, 175, 55, 0.55);
+  --shadow-gold-glow: 0 0 35px rgba(212, 175, 55, 0.12);
+  --shadow-leather: 0 20px 50px rgba(0, 0, 0, 0.7);
+
+  /* Radius & Spacing */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--bg-dark-void);
+  color: var(--text-silk);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark-void);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-leather-cognac);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold-dark);
+}
+
+/* Typography Helpers */
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: var(--font-serif-display);
+  letter-spacing: 0.04em;
+}
+
+.gold-text {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.gold-border-glow {
+  border: var(--border-gold-subtle);
+  box-shadow: var(--shadow-gold-glow);
+  transition: all 0.4s ease;
+}
+
+.gold-border-glow:hover {
+  border: var(--border-gold-bright);
+  box-shadow: 0 0 45px rgba(212, 175, 55, 0.25);
+}
+
+/* Leather Texture Card */
+.leather-card {
+  background: var(--leather-gradient);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-leather);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.leather-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: radial-gradient(rgba(212, 175, 55, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.leather-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212, 175, 55, 0.15);
+}
+
+/* Gold Button Styles */
+.btn-gold {
+  background: var(--gold-gradient);
+  color: #0A0A0C;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gold::after {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: linear-gradient(60deg, transparent 30%, rgba(255, 255, 255, 0.4) 50%, transparent 70%);
+  transform: rotate(30deg) translateY(-100%);
+  transition: transform 0.8s ease;
+}
+
+.btn-gold:hover::after {
+  transform: rotate(30deg) translateY(100%);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
+}
+
+.btn-outline-gold {
+  background: transparent;
+  color: var(--gold-light);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.875rem 2rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-outline-gold:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: var(--gold-pure);
+  color: var(--text-silk);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+}
+
+/* Monogram Crest Frame */
+.crested-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 1rem;
+  background: rgba(38, 23, 14, 0.6);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: var(--radius-full);
+  color: var(--gold-light);
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* Glass Header */
+.header-glass {
+  background: rgba(6, 6, 7, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+  transition: all 0.3s ease;
+}
+
+/* Background Animated Gold Grid */
+.bg-gold-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(212, 175, 55, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(212, 175, 55, 0.04) 1px, transparent 1px);
+}
+
+/* Keyframe Animations */
+@keyframes goldPulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.05); }
+}
+
+.animate-gold-pulse {
+  animation: goldPulse 4s infinite ease-in-out;
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+  .btn-gold, .btn-outline-gold {
+    width: 100%;
+    justify-content: center;
+  }
+}
