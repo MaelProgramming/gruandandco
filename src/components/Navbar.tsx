@@ -30,8 +30,12 @@ export const Navbar: React.FC<NavbarProps> = ({ lang, setLang, onOpenContact }) 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'header-glass py-3' : 'bg-transparent py-5'
+        scrolled ? 'header-glass' : 'bg-transparent'
       }`}
+      style={{
+        paddingTop: scrolled ? '1.25rem' : '1.75rem',
+        paddingBottom: scrolled ? '0.75rem' : '1.25rem',
+      }}
     >
       <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 1.5rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>

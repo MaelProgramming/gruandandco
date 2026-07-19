@@ -43,7 +43,7 @@ export const Hero: React.FC<HeroProps> = ({ lang, onOpenEstimator, onOpenContact
     <section
       style={{
         position: 'relative',
-        paddingTop: '9rem',
+        paddingTop: '10.5rem',
         paddingBottom: '5rem',
         overflow: 'hidden',
       }}
