@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Shield, Cpu, Briefcase, Gem, ArrowRight, CheckCircle2, X, ChevronRight } from 'lucide-react';
+import { Globe, Code2, ShoppingBag, Gauge, ArrowRight, CheckCircle2, X, ChevronRight } from 'lucide-react';
 
 interface ServicesProps {
   lang: 'FR' | 'EN';
@@ -12,63 +12,63 @@ export const Services: React.FC<ServicesProps> = ({ lang, onSelectService }) => 
   const services = [
     {
       id: 1,
-      icon: Shield,
-      title: lang === 'FR' ? 'Conseil Stratégique & Gouvernance' : 'Executive Governance & Strategy',
-      subtitle: lang === 'FR' ? 'Pilotage d’élite & Décisions d’Impact' : 'Elite Leadership & Strategic Guidance',
+      icon: Globe,
+      title: lang === 'FR' ? 'Sites Vitrines Luxe & Prestige' : 'Luxury Vitrine & Brand Web Presence',
+      subtitle: lang === 'FR' ? 'Image de Marque Immortelle & UI/UX' : 'Immortal Brand Identity & UX/UI',
       desc: lang === 'FR'
-        ? 'Nous accompagnons les fondateurs et comités de direction dans leurs arbitrages critiques : restructuration, expansion internationale, préparation M&A et stratégie de croissance résiliente.'
-        : 'Guiding founders and executive boards through pivotal milestones: restructuring, global expansion, M&A readiness, and resilient growth strategies.',
+        ? 'Création de sites vitrines d’exception conçus sur-mesure pour sublimer l’image de votre entreprise. Animations fluides, direction artistique haut de gamme et adaptation mobile parfaite.'
+        : 'Designing exceptional custom showcase websites to elevate your brand image. Smooth animations, haute couture art direction, and flawless mobile responsiveness.',
       deliverables: lang === 'FR'
-        ? ['Audit de Gouvernance & Scalabilité', 'Plan Stratégique à 3 Ans', 'Préparation Levée / M&A', 'Accompagnement Comité de Direction']
-        : ['Governance & Scalability Audit', '3-Year Strategic Roadmap', 'M&A & Fundraising Prep', 'Board & Executive Advisory'],
+        ? ['Design UI/UX Sur-Mesure', 'Développement React / TypeScript', 'Animations & Micro-Interactions', 'Optimisation Référencement SEO']
+        : ['Custom UI/UX Design', 'React / TypeScript Development', 'Micro-Animations & Motion', 'Search Engine Optimization (SEO)'],
       details: lang === 'FR'
-        ? 'Notre approche repose sur des modèles de prise de décision éprouvés, combinant analyse financière approfondie et prospective technologique. Chaque recommandation est personnalisée et assortie d’un plan d’exécution direct.'
-        : 'Our approach relies on proven decision frameworks, merging financial rigor with tech foresight. Every recommendation comes with an actionable execution strategy.'
+        ? 'Nous façonnons chaque page comme un véritable objet d’art numérique. Aucun modèle pré-fait : votre site est codé spécifiquement pour refléter votre prestige.'
+        : 'We craft every page as a digital piece of art. Zero pre-made templates: your website is engineered specifically to mirror your brand prestige.'
     },
     {
       id: 2,
-      icon: Cpu,
-      title: lang === 'FR' ? 'Ingénierie Logicielle & IA Sur-Mesure' : 'Custom Software & AI Engineering',
-      subtitle: lang === 'FR' ? 'Technologies Propriétaires & Souveraines' : 'Proprietary Tech & Sovereign AI',
+      icon: Code2,
+      title: lang === 'FR' ? 'Applications Web & SaaS Sur-Mesure' : 'Custom Web Applications & SaaS',
+      subtitle: lang === 'FR' ? 'Outils Métier & Architectures Modernes' : 'Custom Enterprise Software & Dashboards',
       desc: lang === 'FR'
-        ? 'Développement d’applications web & mobiles haut de gamme, d’algorithmes d’IA générative et d’architectures cloud hautement sécurisées adaptées à vos enjeux métiers.'
-        : 'Engineering high-end web & mobile platforms, generative AI models, and ultra-secure cloud architectures tailored to your business core.',
+        ? 'Ingénierie d’applications web complexes, espaces clients sécurisés, tableaux de bord interactifs et outils de gestion internes développés avec les technologies du web les plus avancées.'
+        : 'Engineering complex web applications, secure client portals, interactive dashboards, and internal management tools using modern web tech.',
       deliverables: lang === 'FR'
-        ? ['SaaS & Applications Métier Sur-Mesure', 'Agents IA & Automation Métier', 'Architecture Cloud Chiffrée', 'Audits de Sécurité & Performance']
-        : ['Custom SaaS & Enterprise Apps', 'AI Agents & Business Automation', 'Encrypted Sovereign Cloud', 'Security & Code Quality Audits'],
+        ? ['Architecture Front-End Moderne', 'Espaces Utilisateurs & Chiffrement', 'Connexion API & Automatisations', 'Tableaux de Bord Dynamiques']
+        : ['Modern Front-End Architecture', 'User Authentication & Encryption', 'API Integrations & Automations', 'Dynamic Executive Dashboards'],
       details: lang === 'FR'
-        ? 'Nous concevons des outils informatiques à forte valeur ajoutée, développés avec les derniers standards (React, TypeScript, Rust, Python, AWS/GCP). Zéro dépendance inutile, performance maximale.'
-        : 'We craft high-value software using modern stacks (React, TypeScript, Python, Rust, Cloud). Clean architecture, zero bloat, maximum performance.'
+        ? 'Nous concevons des logiciels web puissants, rapides et intuitifs. Structure de code propre, maintenable et prête à accompagner la croissance de votre activité.'
+        : 'We engineer powerful, fast, and intuitive web software. Clean, maintainable codebase engineered to scale alongside your business.'
     },
     {
       id: 3,
-      icon: Briefcase,
-      title: lang === 'FR' ? 'Venture Building & Acceleration' : 'Venture Building & Acceleration',
-      subtitle: lang === 'FR' ? 'De l’Idée à l’Enterprise d’Élite' : 'From Conception to Scaled Institution',
+      icon: ShoppingBag,
+      title: lang === 'FR' ? 'E-Commerce Haut de Gamme' : 'High-End E-Commerce Platforms',
+      subtitle: lang === 'FR' ? 'Expérience d’Achat Immorsive & Fluidité' : 'Immersive Shopping & Flawless Checkout',
       desc: lang === 'FR'
-        ? 'Création et lancement accéléré de filiales stratégiques ou de nouveaux business models. Nous prenons en charge la structuration opérationnelle, le Go-to-Market et la scalabilité.'
-        : 'Accelerated creation and launching of strategic spin-offs or new business models. We manage operational setup, Go-To-Market execution, and scaling.',
+        ? 'Conception de boutiques en ligne haute couture adaptées aux marques exigeantes. Parcours d’achat sans friction, paiement sécurisé et mise en valeur maximale de vos produits.'
+        : 'Crafting haute couture online boutiques for discerning brands. Seamless checkout flows, ultra-secure payment, and premium product presentation.',
       deliverables: lang === 'FR'
-        ? ['Structuration du Business Model', 'Maquette & Prototype Produit (MVP)', 'Recrutement des Key Talents', 'Strategie d’Acquisition Client']
-        : ['Business Model Design', 'Product Prototype (MVP)', 'Key Talent Acquisition', 'Client Acquisition Strategy'],
+        ? ['Catalogue & Fiches Produit Luxe', 'Intégration Paiement Sécurisé', 'Parcours d’Achat Optimisé', 'Vitesse de Chargement Minimale']
+        : ['Luxury Product Showcases', 'Secure Payment Integration', 'Optimized Checkout UX', 'Ultra-Fast Load Speeds'],
       details: lang === 'FR'
-        ? 'Un accompagnement à 360° où nous co-construisons avec vous le véhicule d’entreprise idéal. Nous alignons l’ingénierie financière, le produit et l’acquisition.'
-        : 'A 360° partnership where we co-build the ideal venture vehicle. Aligning financial structure, product execution, and market expansion.'
+        ? 'Une vitrine marchande élégante qui transforme les visiteurs en clients fidèles, combinant esthétique raffinée et haute conversion.'
+        : 'An elegant store converting visitors into loyal clients, uniting refined aesthetics with high conversion rates.'
     },
     {
       id: 4,
-      icon: Gem,
-      title: lang === 'FR' ? 'Branding Luxe & Patrimoine Digital' : 'Luxury Branding & Digital Heritage',
-      subtitle: lang === 'FR' ? 'Identité Visuelle & Expérience Haute Couture' : 'Haute Couture Visual & UX Identity',
+      icon: Gauge,
+      title: lang === 'FR' ? 'Audit de Performance, SEO & Refonte' : 'Performance Audit, SEO & Redesign',
+      subtitle: lang === 'FR' ? 'Vitesse 100/100 & Modernisation Web' : '100/100 Speed & Modern Web Refactoring',
       desc: lang === 'FR'
-        ? 'Direction artistique d’exception, esthétique raffinée et interfaces utilisateur pensées comme des objets d’art pour inspirer confiance et distinction immédiate.'
-        : 'Exquisite art direction, refined aesthetics, and user interfaces designed like master objects to instill trust and prestige.',
+        ? 'Optimisation chirurgicale de la vitesse de vos pages existantes, nettoyage de dette technique, refonte d’ergonomie et alignement aux meilleures pratiques SEO et web.'
+        : 'Surgical speed optimization for your existing pages, technical debt cleanup, UX redesign, and alignment with modern SEO best practices.',
       deliverables: lang === 'FR'
-        ? ['Charte Graphique & Brand Book Luxe', 'Design System & Interfaces UX/UI', 'Copywriting & Narrative Building', 'Sites Web & Expériences Immersives']
-        : ['Luxury Brand Book & Identity', 'Design System & High-End UX/UI', 'Prestige Copywriting', 'Immersive Web Experiences'],
+        ? ['Audit de Vitesse & Core Web Vitals', 'Refonte Graphique & Modernisation', 'Nettoyage du Code & Dette Tech', 'Optimisation SEO Technique']
+        : ['Speed & Core Web Vitals Audit', 'Visual Redesign & Modernization', 'Code Cleanup & Debt Refactor', 'Technical SEO Optimization'],
       details: lang === 'FR'
-        ? 'Chaque typographie, palette de couleurs et micro-interaction est pensée pour refléter l’excellence de votre marque. Une présence numérique impériale qui marque les esprits.'
-        : 'Every typeface, color palette, and micro-animation is crafted to project your brand’s mastery. A digital footprint that commands respect.'
+        ? 'Transformez un site lent ou obsolète en une référence de rapidité et d’élégance numérique.'
+        : 'Turn a slow or outdated site into a benchmark of speed and digital elegance.'
     },
   ];
 
@@ -87,7 +87,7 @@ export const Services: React.FC<ServicesProps> = ({ lang, onSelectService }) => 
               fontWeight: 700,
             }}
           >
-            {lang === 'FR' ? 'NOS PÔLES D’EXCELLENCE' : 'OUR EXPERTISE PILLARS'}
+            {lang === 'FR' ? 'NOS PÔLES D’EXCELLENCE WEB' : 'OUR WEB EXPERTISE PILLARS'}
           </span>
           <h2
             style={{
@@ -98,7 +98,7 @@ export const Services: React.FC<ServicesProps> = ({ lang, onSelectService }) => 
               lineHeight: 1.2,
             }}
           >
-            {lang === 'FR' ? 'Ingénierie & Accompagnement Sur-Mesure' : 'Custom Engineering & Strategic Guidance'}
+            {lang === 'FR' ? 'Ingénierie Web Sur-Mesure & Design d’Élite' : 'Custom Web Engineering & Elite Design'}
           </h2>
           <div style={{ width: '60px', height: '2px', background: 'var(--gold-gradient)', margin: '0 auto' }} />
         </div>

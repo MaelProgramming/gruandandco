@@ -14,41 +14,41 @@ export const ProjectEstimator: React.FC<ProjectEstimatorProps> = ({ lang, onSend
   const poles = [
     {
       id: 0,
-      name: lang === 'FR' ? 'Conseil Stratégique & Diagnostic' : 'Strategic Advisory & Audit',
-      basePrice: 1500,
-      timeWeeks: 2,
+      name: lang === 'FR' ? 'Site Vitrine Luxe & UI/UX' : 'Luxury Vitrine & UX/UI',
+      basePrice: 3500,
+      timeWeeks: 3,
     },
     {
       id: 1,
-      name: lang === 'FR' ? 'Développement Web & App Sur-Mesure' : 'Custom Web & Software Build',
-      basePrice: 2500,
-      timeWeeks: 4,
+      name: lang === 'FR' ? 'Application Web & SaaS Sur-Mesure' : 'Bespoke Web App & SaaS',
+      basePrice: 6500,
+      timeWeeks: 5,
     },
     {
       id: 2,
-      name: lang === 'FR' ? 'Accompagnement Lancement d’Entreprise' : 'Venture & Business Launch Support',
-      basePrice: 4500,
-      timeWeeks: 6,
+      name: lang === 'FR' ? 'E-Commerce Haut de Gamme' : 'High-End E-Commerce Boutique',
+      basePrice: 5500,
+      timeWeeks: 4,
     },
     {
       id: 3,
-      name: lang === 'FR' ? 'Design, Branding & Identité Visuelle' : 'Branding & UI/UX Design',
-      basePrice: 1200,
+      name: lang === 'FR' ? 'Audit de Vitesse, SEO & Refonte' : 'Speed Audit, SEO & Redesign',
+      basePrice: 3000,
       timeWeeks: 2,
     },
   ];
 
   const tiers = [
-    { id: 0, label: lang === 'FR' ? 'Essentiel / Lancement' : 'Essential Launch', mult: 1.0, sub: lang === 'FR' ? 'Bases solides & livrables clés' : 'Core solid foundations' },
-    { id: 1, label: lang === 'FR' ? 'Sur-Mesure Complet' : 'Fully Custom Build', mult: 1.3, sub: lang === 'FR' ? 'Personnalisation poussée' : 'Advanced personalization' },
-    { id: 2, label: lang === 'FR' ? 'Pack Intégral Exec' : 'Integral Executive Pack', mult: 1.6, sub: lang === 'FR' ? 'Accompagnement étendu' : 'Extended partnership' },
+    { id: 0, label: lang === 'FR' ? 'Standard Haute Qualité' : 'High Quality Standard', mult: 1.0, sub: lang === 'FR' ? 'Excellence & finitions soignées' : 'Excellence & refined craft' },
+    { id: 1, label: lang === 'FR' ? 'Sur-Mesure Luxe' : 'Haute Couture Bespoke', mult: 1.35, sub: lang === 'FR' ? 'Design exclusif & composants uniques' : 'Exclusive design & custom elements' },
+    { id: 2, label: lang === 'FR' ? 'Pack Intégral Executive' : 'Integral Executive Pack', mult: 1.75, sub: lang === 'FR' ? 'Accompagnement étendu & multi-modules' : 'Extended partnership & multi-suite' },
   ];
 
   const addons = [
-    { id: 0, name: lang === 'FR' ? 'Intégration Moteur IA / Automation' : 'AI & Automation Engine Integration', price: 800, weeks: 1 },
-    { id: 1, name: lang === 'FR' ? 'Optimisation Cloud & Sécurité' : 'Cloud Setup & Security Hardening', price: 500, weeks: 1 },
-    { id: 2, name: lang === 'FR' ? 'Livraison Accélérée (Sprint Priority)' : 'Accelerated Sprint Delivery', price: 600, weeks: -1 },
-    { id: 3, name: lang === 'FR' ? 'Suivi & Support 3 Mois' : '3-Month Post-Launch Support', price: 700, weeks: 0 },
+    { id: 0, name: lang === 'FR' ? 'Animations & Motion UI Avancés' : 'Advanced Motion UI & Animations', price: 1200, weeks: 1 },
+    { id: 1, name: lang === 'FR' ? 'Intégration API & Automatisations' : 'API Integrations & Automations', price: 1500, weeks: 1 },
+    { id: 2, name: lang === 'FR' ? 'Livraison Accélérée (Sprint Priority)' : 'Accelerated Sprint Delivery', price: 1800, weeks: -1 },
+    { id: 3, name: lang === 'FR' ? 'Maintenance & Support Dédié 6 Mois' : '6-Month Post-Launch Maintenance', price: 2200, weeks: 0 },
   ];
 
   const toggleAddon = (id: number) => {
@@ -83,15 +83,15 @@ export const ProjectEstimator: React.FC<ProjectEstimatorProps> = ({ lang, onSend
         <div style={{ textAlign: 'center', maxWidth: '750px', margin: '0 auto 3.5rem auto' }}>
           <div className="crested-badge" style={{ marginBottom: '1rem' }}>
             <Calculator size={14} color="#D4AF37" />
-            <span>{lang === 'FR' ? 'SIMULATEUR DE BUDGET ACCESSIBLE' : 'ESTIMATE YOUR PROJECT'}</span>
+            <span>{lang === 'FR' ? 'SIMULATEUR DE PROJET WEB HAUT DE GAMME' : 'PROJECT INVESTMENT ESTIMATOR'}</span>
           </div>
           <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 3rem)', color: '#F8F6F0', lineHeight: 1.2 }}>
-            {lang === 'FR' ? 'Une Tarification Claire & Transparente' : 'Clear & Transparent Investment Projection'}
+            {lang === 'FR' ? 'Tarification Alignée au Marché Luxe' : 'Luxury & Quality Market Rate Projection'}
           </h2>
           <p style={{ color: '#C9C3B4', fontSize: '1rem', marginTop: '0.75rem' }}>
             {lang === 'FR'
-              ? 'Calculez une première estimation de votre projet. Pas de mauvaise surprise : chaque devis final est fixe et garanti.'
-              : 'Calculate a transparent projection for your project. No surprise costs: every final quote is fixed.'}
+              ? 'Calculez une estimation transparente pour votre projet web. Aucun frais caché : devis ferme après cadrage du besoin.'
+              : 'Calculate a transparent investment projection for your web project. Fixed quote after specifications review.'}
           </p>
         </div>
 
@@ -110,7 +110,7 @@ export const ProjectEstimator: React.FC<ProjectEstimatorProps> = ({ lang, onSend
             {/* Step 1: Pole */}
             <div style={{ marginBottom: '2rem' }}>
               <label style={{ display: 'block', fontSize: '0.85rem', color: '#D4AF37', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.85rem', fontWeight: 600 }}>
-                1. {lang === 'FR' ? 'Type de Prestation Principal' : 'Primary Expertise Area'}
+                1. {lang === 'FR' ? 'Type de Projet Web' : 'Primary Project Type'}
               </label>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
                 {poles.map((p) => (
@@ -143,7 +143,7 @@ export const ProjectEstimator: React.FC<ProjectEstimatorProps> = ({ lang, onSend
             {/* Step 2: Tier */}
             <div style={{ marginBottom: '2rem' }}>
               <label style={{ display: 'block', fontSize: '0.85rem', color: '#D4AF37', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.85rem', fontWeight: 600 }}>
-                2. {lang === 'FR' ? 'Niveau de Périmètre' : 'Scope Level'}
+                2. {lang === 'FR' ? 'Niveau de Finition & Exigence' : 'Craft & Scope Level'}
               </label>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '0.75rem' }}>
                 {tiers.map((t) => (
@@ -172,7 +172,7 @@ export const ProjectEstimator: React.FC<ProjectEstimatorProps> = ({ lang, onSend
             {/* Step 3: Addons */}
             <div>
               <label style={{ display: 'block', fontSize: '0.85rem', color: '#D4AF37', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '0.85rem', fontWeight: 600 }}>
-                3. {lang === 'FR' ? 'Options d’Accélération' : 'Addon Options'}
+                3. {lang === 'FR' ? 'Options Web Spécifiques' : 'Specific Web Modules'}
               </label>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
                 {addons.map((a) => {
@@ -237,13 +237,13 @@ export const ProjectEstimator: React.FC<ProjectEstimatorProps> = ({ lang, onSend
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1.5rem', color: '#D4AF37' }}>
               <Sparkles size={20} />
               <span style={{ fontSize: '0.85rem', letterSpacing: '0.15em', textTransform: 'uppercase', fontWeight: 700 }}>
-                {lang === 'FR' ? 'ESTIMATION BUDGET' : 'PROJECT ESTIMATE'}
+                {lang === 'FR' ? 'ESTIMATION BUDGET HAUT DE GAMME' : 'PROJECT PROJECTION'}
               </span>
             </div>
 
             <div style={{ marginBottom: '2rem' }}>
               <div style={{ fontSize: '0.8rem', color: '#C9C3B4', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-                {lang === 'FR' ? 'Fourchette d’Investissement Estimée' : 'Estimated Price Range'}
+                {lang === 'FR' ? 'Fourchette d’Investissement Estimée' : 'Estimated Investment Range'}
               </div>
               <div
                 style={{
@@ -257,7 +257,7 @@ export const ProjectEstimator: React.FC<ProjectEstimatorProps> = ({ lang, onSend
                 {formatPrice(minPrice)} – {formatPrice(maxPrice)}
               </div>
               <div style={{ fontSize: '0.75rem', color: '#8E887B' }}>
-                * {lang === 'FR' ? 'Tarif indicatif. Devis ferme après échange et ajustement du besoin.' : 'Indicative rate. Fixed quote after consultation.'}
+                * {lang === 'FR' ? 'Hors taxes. Devis ferme établi après analyse du cahier des charges.' : 'Excl. VAT. Final calibration after specifications.'}
               </div>
             </div>
 
@@ -278,7 +278,7 @@ export const ProjectEstimator: React.FC<ProjectEstimatorProps> = ({ lang, onSend
                   <span>{lang === 'FR' ? 'Engagements' : 'Commitment'}</span>
                 </div>
                 <div style={{ fontSize: '0.85rem', color: '#F8F6F0', fontWeight: 600 }}>
-                  {lang === 'FR' ? 'Prix Fixe & Suivi' : 'Fixed Price & Support'}
+                  {lang === 'FR' ? 'Prix Fixe & Suivi' : 'Fixed Rate & Support'}
                 </div>
               </div>
             </div>
@@ -288,7 +288,7 @@ export const ProjectEstimator: React.FC<ProjectEstimatorProps> = ({ lang, onSend
               className="btn-gold"
               style={{ width: '100%', justifyContent: 'center', padding: '1rem' }}
             >
-              <span>{lang === 'FR' ? 'Demander un Devis Gratuit' : 'Request Free Quote'}</span>
+              <span>{lang === 'FR' ? 'Demander une Proposition Web' : 'Request Proposal'}</span>
               <ArrowRight size={18} />
             </button>
 
